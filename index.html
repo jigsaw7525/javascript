@@ -107,22 +107,16 @@
         const END = 49;
 
         for (j = 0; j < 10; j++) {
+            let number;
+            let lottoNumber = "";
+
             document.write(`<h4>第${j + 1}組</h4>`)
             for (i = 0; i < 6; i++) {
                 number = Math.floor(Math.random() * (END - START + 1)) + START
-                console.log(`第${i + 1}個號碼: ${number}`); //反引號加字串 ${}加數字之類的
-                document.write(`<h3>第${i + 1}個號碼: ${number}</h3>`)
+                lottoNumber += number + " "
+                document.write(`<h3>第${i + 1}個號碼: ${number}</h3>`);
             }
-        }
-        let lottoNumber;
-        for (j = 0; j < 10; j++) {
-            document.write(`<h4>第${j + 1}組</h4>`)
-            for (i = 0; i < 6; i++) {
-                lottoNumber = Math.floor(Math.random() * (END - START + 1)) + START
-                lottoNumber += Math.floor(Math.random() * (END - START + 1)) + START + " "
-                console.log(`第${i + 1}個號碼: ${number}`); //反引號加字串 ${}加數字之類的s
-                document.write(`<h3>${lottoNumber}</h3>`);
-            }
+            document.write(lottoNumber)
         }
     </script>
 </body>
