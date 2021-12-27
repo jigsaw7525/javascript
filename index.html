@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+
+
+
+</head>
+
+<body>
+    <h1>JavaScript!</h1>
+
+    <script>
+        //-------------------------------區域全域--------------------------------  
+        // // 全域變數
+        // let x = 10; // 兩邊都用var，區域會把全域覆蓋掉
+        // {
+        //     // 區域變數
+        //     let x = 20; // 用var就會錯
+        //     let y = '30'
+        //     // 網頁上的print的感覺，在console裡面可看到
+        //     console.log(x); // x = 20
+        // }
+        // console.log(x); // x = 10
+
+        // //----------------------------變數設定-----------------------------------
+        // const PI = 3.1415926 // const設定常數 跟final類似
+        // let radius = prompt("請輸入半徑:")
+        // console.log(radius + 10) // 字串+數字會變串接
+        // console.log(radius - 10) // 字串-*/%數字會變運算
+        // area = radius * radius * PI
+        // console.log(radius, typeof (radius), area) // typeof()查看型態
+        // document.write("<h2>" + area + "</h2>") //輸出至網頁上
+
+        // //-----------------------------string相關函數--------------------------------
+        // const email = "jigsaw7525@gmail.com"
+        // console.log(email); // 輸入email
+        // console.log(typeof (email)); // 型態
+        // console.log(email.toUpperCase()); // 變大寫
+        // console.log(email.toLowerCase()); // 變小寫
+        // console.log(email.substring(0, 6)); // 查看index0~5的字
+        // console.log(email.indexOf("a")); //a在index多少
+        // console.log(email.indexOf("1")); // 1在index多少 不在會輸出-1
+        // console.log(email.replace("jigsaw", "wender")); // 替換字串 後面取在前面
+        // // email = email.replace("jigsaw", "wender") //已設定為const所以無法更改
+        // console.log(email.includes("jigsaw")); // 是否包含此字串 有為true
+        // console.log(email.includes("wender")); // 是否包含此字串 否為false
+        // for (let i = 0; i < email.length; i++) { // 迴圈輸出每個字對應的index
+        //     console.log(i, email[i]);
+        // }
+
+        // //-----------------------------型態運算--------------------------------
+        // let x = 20;
+        // let y = 10;
+        // console.log(x, y); // 20 10
+        // console.log(++x, y++); // 先加後加 21 10
+        // console.log(x, y); // 21 11
+
+        // console.log("A" > "a"); // 布林值比對ascii碼
+        // let a = "25";
+        // let b = 25;
+        // console.log(a == b); // 會自動比對數值
+        // console.log(a === b); // 數值與型態必須一致
+
+        // //-----------------------------邏輯運算--------------------------------
+        // let x = 10;
+        // let y = 20;
+        // let z = 30;
+        // if (x < y && x < z) {
+        //     console.log(1);
+        // }
+        // if (x < y || x > z) {
+        //     console.log(2);
+        // }
+        // if (!(x > y) && x < z) {
+        //     console.log(3);
+        // }
+        // x = ""; //空字串為false
+        // if (!x) { //!false為true
+        //     console.log(4);
+        // }
+
+        // //-----------------------------Math.random--------------------------------
+        console.log(Math.PI);
+        console.log(Math.E);
+        const x = 7.7;
+        console.log(x); // 7.7
+        console.log(Math.abs(x)); //7.7
+        console.log(Math.ceil(x)); //8 ceil取大於等於自己的那個整數
+        console.log(Math.floor(x));//7 floor取小於等於自己的那個整數
+        console.log(Math.round(x)); //8 round四捨五入
+
+        console.log(Math.random()); //0~0.99...
+        console.log(Math.random() * 10); //0~9.99...
+        console.log(Math.floor(Math.random() * 10)); //0~9 floor取小於等於自己的那個整數
+        console.log(Math.floor(Math.random() * 10) + 1); //1~10
+        // console.log(Math.floor(Math.random() * (end - start +1)) + start); //start~end
+        console.log(Math.floor(Math.random() * (100 - 10 + 1)) + 10); //10~100
+
+        console.log("大樂透開獎")
+        const START = 1;
+        const END = 49;
+
+        for (j = 0; j < 10; j++) {
+            document.write(`<h4>第${j + 1}組</h4>`)
+            for (i = 0; i < 6; i++) {
+                number = Math.floor(Math.random() * (END - START + 1)) + START
+                console.log(`第${i + 1}個號碼: ${number}`); //反引號加字串 ${}加數字之類的
+                document.write(`<h3>第${i + 1}個號碼: ${number}</h3>`)
+            }
+        }
+        let lottoNumber;
+        for (j = 0; j < 10; j++) {
+            document.write(`<h4>第${j + 1}組</h4>`)
+            for (i = 0; i < 6; i++) {
+                lottoNumber = Math.floor(Math.random() * (END - START + 1)) + START
+                lottoNumber += Math.floor(Math.random() * (END - START + 1)) + START + " "
+                console.log(`第${i + 1}個號碼: ${number}`); //反引號加字串 ${}加數字之類的s
+                document.write(`<h3>${lottoNumber}</h3>`);
+            }
+        }
+    </script>
+</body>
+
+</html>
