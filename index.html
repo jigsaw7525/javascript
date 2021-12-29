@@ -16,7 +16,7 @@
     <h1>JavaScript!</h1>
 
     <script>
-        //-------------------------------區域全域--------------------------------  
+        // //-------------------------------區域全域--------------------------------  
         // // 全域變數
         // let x = 10; // 兩邊都用var，區域會把全域覆蓋掉
         // {
@@ -86,38 +86,58 @@
         // }
 
         // //-----------------------------Math.random--------------------------------
-        console.log(Math.PI);
-        console.log(Math.E);
-        const x = 7.7;
-        console.log(x); // 7.7
-        console.log(Math.abs(x)); //7.7
-        console.log(Math.ceil(x)); //8 ceil取大於等於自己的那個整數
-        console.log(Math.floor(x));//7 floor取小於等於自己的那個整數
-        console.log(Math.round(x)); //8 round四捨五入
+        // console.log(Math.PI);
+        // console.log(Math.E);
+        // const x = 7.7;
+        // console.log(x); // 7.7
+        // console.log(Math.abs(x)); //7.7
+        // console.log(Math.ceil(x)); //8 ceil取大於等於自己的那個整數
+        // console.log(Math.floor(x));//7 floor取小於等於自己的那個整數
+        // console.log(Math.round(x)); //8 round四捨五入
 
-        console.log(Math.random()); //0~0.99...
-        console.log(Math.random() * 10); //0~9.99...
-        console.log(Math.floor(Math.random() * 10)); //0~9 floor取小於等於自己的那個整數
-        console.log(Math.floor(Math.random() * 10) + 1); //1~10
-        // console.log(Math.floor(Math.random() * (end - start +1)) + start); //start~end
-        console.log(Math.floor(Math.random() * (100 - 10 + 1)) + 10); //10~100
+        // console.log(Math.random()); //0~0.99...
+        // console.log(Math.random() * 10); //0~9.99...
+        // console.log(Math.floor(Math.random() * 10)); //0~9 floor取小於等於自己的那個整數
+        // console.log(Math.floor(Math.random() * 10) + 1); //1~10
+        // // console.log(Math.floor(Math.random() * (end - start +1)) + start); //start~end
+        // console.log(Math.floor(Math.random() * (100 - 10 + 1)) + 10); //10~100
 
-        console.log("大樂透開獎")
-        const START = 1;
-        const END = 49;
+        // console.log("大樂透開獎")
+        // const START = 1;
+        // const END = 49;
+        // let lotto = "<ul>"
+        // for (j = 0; j < 10; j++) {
+        //     let number;
+        //     let lottoNumber = "";
+        //     //document.write(`<h4>第${j + 1}組</h4>`)
+        //     for (i = 0; i < 6; i++) {
+        //         number = Math.floor(Math.random() * (END - START + 1)) + START
+        //         lottoNumber += number + " "
+        //         //document.write(`<h3>第${i + 1}個號碼: ${number}</h3>`);
+        //     }
+        //     lotto += `<li>${lottoNumber}</li>`
+        //     document.write(`<h2>${lottoNumber}</h2>`)
+        // }
+        // lotto += "</ul>"
+        // document.write(lotto)
 
-        for (j = 0; j < 10; j++) {
-            let number;
-            let lottoNumber = "";
-
-            document.write(`<h4>第${j + 1}組</h4>`)
-            for (i = 0; i < 6; i++) {
-                number = Math.floor(Math.random() * (END - START + 1)) + START
-                lottoNumber += number + " "
-                document.write(`<h3>第${i + 1}個號碼: ${number}</h3>`);
+        // //-----------------------------Array--------------------------------
+        let student = [
+            ["jerry", 78, 67, 89],
+            ["mary", 100, 99, 88, 100],
+            ["kevin", 77, 99, 88]
+        ];
+        for (let i = 0; i < student.length; i++) {
+            const name = student[i][0];
+            const scores = student[i].slice(1, student[i].length);
+            let total = 0;
+            for (let j = 0; j < scores.length; j++) {
+                total += scores[j];
             }
-            document.write(lottoNumber)
+            let avg = total / scores.length;
+            console.log(name, total, avg.toFixed(2));
         }
+
     </script>
 </body>
 
